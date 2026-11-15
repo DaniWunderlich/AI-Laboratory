@@ -4,6 +4,18 @@ Ein lokales Lernlabor zum Bauen, Trainieren und Untersuchen kleiner neuronaler
 Netze. Die Modelle rechnen tatsächlich mit PyTorch auf der CPU. Oberfläche und
 Kontexthilfen sind auf Deutsch und Englisch verfügbar, mit hellem und dunklem Modus.
 
+## Einblicke
+
+**Training im hellen Modus:** Ein Two-Moons-Netz mit Trainings- und
+Validierungsverlauf sowie der gelernten Entscheidungsfläche.
+
+![Visueller Netzaufbau und abgeschlossenes Two-Moons-Training mit Loss, Accuracy und Entscheidungsfläche im hellen Modus](assets/screenshots/training-light.png)
+
+**Inspector im dunklen Modus:** Die Rechnung eines einzelnen Neurons mit
+Eingaben, Gewichten, Bias und Gradienten nachvollziehen.
+
+![Inspector im dunklen Modus mit Neuronenberechnung, Vorhersage und Tabelle der Gewichte und Gradienten](assets/screenshots/inspector-dark.png)
+
 ## Ausprobieren unter Windows und Linux
 
 Benötigt werden Git und Docker mit dem Compose-Plugin (`docker compose`). Unter
