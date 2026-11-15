@@ -1,0 +1,21 @@
+name: ml-laboratory
+services:
+  ml-laboratory-backend:
+    build: ./backend
+    init: true
+    environment:
+      LAB_DATA_DIR: /data
+    volumes:
+      - laboratory_data:/data
+    restart: unless-stopped
+    stop_grace_period: 15s
+  ml-laboratory-frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:${LAB_PORT:-18400}:80"
+    depends_on:
+      ml-laboratory-backend:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  laboratory_data:

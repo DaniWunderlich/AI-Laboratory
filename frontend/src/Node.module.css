@@ -1,0 +1,89 @@
+.actions {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  background: var(--surface);
+}
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.description {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+}
+.plot {
+  display: block;
+  width: 100%;
+  height: 80px;
+  background: var(--surface);
+  border-radius: 4px;
+}
+.dialog {
+  width: min(520px, calc(100vw - 30px));
+  padding: 24px;
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--ink);
+  box-shadow: 0 15px 60px #0003;
+  background: var(--panel);
+}
+.dialog::backdrop {
+  background: color-mix(in srgb, var(--header) 44%, transparent);
+}
+.dialog p {
+  font-size: 13px;
+  color: var(--ink);
+}
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.dialogHeader h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.dialogHeader button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+}
+.dialog details {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.dialog code {
+  font-size: 10px;
+  overflow-wrap: anywhere;
+}
+.dialogActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+.dialogActions button:last-child {
+  background: var(--surface);
+}

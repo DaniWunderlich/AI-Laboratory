@@ -1,0 +1,44 @@
+.feedback {
+  font-size: 11px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  padding: 8px 11px;
+  margin: 8px 0;
+  color: var(--ink);
+}
+.feedback summary {
+  line-height: 1.5;
+}
+.feedback p {
+  font-size: 12px;
+  margin: 10px 0;
+  max-width: 850px;
+}
+.caution {
+  color: var(--danger);
+}
+.waiting {
+  font-size: 11px;
+  margin: 5px 0;
+  color: var(--muted);
+}
+@media (min-width: 1100px) and (pointer: fine) {
+  .feedback {
+    padding: 4px 8px;
+    margin: 4px 0;
+    font-size: 10px;
+  }
+  .feedback[open] > div {
+    position: fixed;
+    right: 265px;
+    bottom: 38px;
+    z-index: 25;
+    width: min(620px, calc(100vw - 300px));
+    max-height: 55vh;
+    overflow: auto;
+    padding: 16px;
+    border: 1px solid var(--accent);
+    background: var(--surface);
+    box-shadow: 0 8px 30px #0003;
+  }
+}

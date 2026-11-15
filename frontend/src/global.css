@@ -1,0 +1,202 @@
+:root {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--surface);
+  font-synthesis: none;
+}
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ink: #183346;
+  --muted: #526d7c;
+  --line: #ccdce6;
+  --accent: #1176a8;
+  --accent-ink: #fff;
+  --green: #1176a8;
+  --panel: #fff;
+  --surface: #f0f6fa;
+  --selected: #dbedf7;
+  --header: #102a3b;
+  --header-ink: #e8f4fb;
+  --header-line: #456171;
+  --danger: #b34831;
+  --warning-bg: #fff0e9;
+  --chart-grid: #d5e0e8;
+  --class-zero: #258ac1;
+  --class-one: #d87634;
+  --class-zero-soft: #c5e2f3;
+  --class-one-soft: #f2d7c3;
+  color: var(--ink);
+  background: var(--surface);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #eee9f7;
+  --muted: #b6aaca;
+  --line: #4b3e5c;
+  --accent: #b797ed;
+  --accent-ink: #1d132b;
+  --green: #b797ed;
+  --panel: #241d33;
+  --surface: #1b1626;
+  --selected: #3d2f55;
+  --header: #130f1c;
+  --header-ink: #eee9f7;
+  --header-line: #50415f;
+  --danger: #ffae95;
+  --warning-bg: #432a32;
+  --chart-grid: #51425f;
+  --class-zero: #5bb6ed;
+  --class-one: #efab70;
+  --class-zero-soft: #273f57;
+  --class-one-soft: #58402f;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+select {
+  cursor: pointer;
+}
+button {
+  color: inherit;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel);
+  padding: 8px 12px;
+  transition: background 0.15s;
+}
+button:hover {
+  background: var(--surface);
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button svg {
+  flex-shrink: 0;
+}
+input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+input,
+select {
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 7px 9px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--ink);
+}
+label input,
+label select {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 20px;
+}
+p {
+  line-height: 1.6;
+}
+code {
+  font-family: Consolas, monospace;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--header-line);
+  outline-offset: 3px;
+}
+a {
+  color: inherit;
+}
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  border: 2px solid var(--line);
+}
+.react-flow__edge-path {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+.react-flow__attribution {
+  font-size: 9px;
+}
+.react-flow__controls {
+  box-shadow: 0 1px 5px #0003;
+}
+.react-flow__controls button {
+  border-radius: 0;
+  background: var(--panel);
+  color: var(--ink);
+  fill: var(--ink);
+  border-bottom-color: var(--line);
+}
+.react-flow__attribution { background: var(--panel); color: var(--muted); }
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 12px;
+  gap: 8px;
+}
+dd {
+  margin: 0;
+  text-align: right;
+  font-family: monospace;
+}
+dt {
+  color: var(--muted);
+}
+table {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  font-weight: 500;
+  color: var(--muted);
+}
+summary {
+  cursor: pointer;
+}
+::selection {
+  background: var(--selected);
+}

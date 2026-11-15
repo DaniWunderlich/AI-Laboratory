@@ -1,0 +1,61 @@
+.controls {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.controls > button,
+.language > button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-color: var(--header-line);
+  color: var(--header-ink);
+  font-size: 15px;
+}
+.controls button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--selected);
+  color: var(--ink);
+}
+.controls svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+.language {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  top: 34px;
+  z-index: 40;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 5px;
+  width: 148px;
+  box-shadow: 0 8px 22px #0003;
+}
+.menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  padding: 7px;
+  color: var(--ink);
+}
+.controls svg.flag {
+  width: 18px;
+  height: 12px;
+  stroke: none;
+}
+.menu .flag {
+  vertical-align: middle;
+  margin-right: 6px;
+}

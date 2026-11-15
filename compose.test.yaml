@@ -1,0 +1,15 @@
+name: ml-laboratory-tests
+services:
+  backend-tests:
+    build:
+      context: ./backend
+      target: test
+    environment:
+      LAB_DATA_DIR: /tmp/laboratory-test-data
+    tmpfs:
+      - /tmp
+  frontend-tests:
+    build:
+      context: ./frontend
+      target: build
+    command: sh -c "npm run lint && npm test"
