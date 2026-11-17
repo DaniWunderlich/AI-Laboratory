@@ -1,5 +1,13 @@
 # AI Laboratory
 
+**Deutsch** | [English (UK)](README.en-GB.md)
+
+[![Tests und Build](https://github.com/DaniWunderlich/AI-Laboratory/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/DaniWunderlich/AI-Laboratory/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/DaniWunderlich/AI-Laboratory)](https://github.com/DaniWunderlich/AI-Laboratory/releases/latest)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](backend/pyproject.toml)
+[![TypeScript 5.9](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](frontend/package.json)
+[![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](compose.yaml)
+
 Ein lokales Lernlabor zum Bauen, Trainieren und Untersuchen kleiner neuronaler
 Netze. Die Modelle rechnen tatsächlich mit PyTorch auf der CPU. Oberfläche und
 Kontexthilfen sind auf Deutsch und Englisch verfügbar, mit hellem und dunklem Modus.
@@ -94,7 +102,13 @@ Abhängigkeiten sind über Lockdateien fixiert.
 Die [API-Dokumentation](http://127.0.0.1:18400/api/docs) ist bei laufender Anwendung
 verfügbar, die Bereitschaftsprüfung unter `/healthz/ready`.
 
-Lint und Tests laufen in separaten, kurzlebigen Containern. Im Projektordner:
+[GitHub Actions](https://github.com/DaniWunderlich/AI-Laboratory/actions/workflows/ci.yml)
+prüft bei Pull Requests und Änderungen an `main` Backend-Lint und -Tests sowie
+Frontend-Lint, TypeScript, Tests und Produktionsbuild. Das Status-Badge zeigt
+das Ergebnis auf `main`; Browsertests werden separat gestartet.
+
+Dieselben Lint-, Test- und Buildprüfungen laufen lokal in separaten, kurzlebigen
+Containern. Im Projektordner:
 
 ```sh
 docker compose -f compose.test.yaml run --rm --build backend-tests
@@ -107,7 +121,3 @@ Schritte. [scripts/test-e2e.ps1](scripts/test-e2e.ps1) führt die Browsertests a
 Port 18401 mit eigenem Testvolume aus; dafür werden lokal Node, die Frontendpakete
 (`npm.cmd ci` in `frontend/`) und Chromium (`npm.cmd exec playwright -- install chromium`)
 benötigt.
-
-Lokale Projektanweisungen gehören nach `doc/AGENTS.md`. Der Ordner `doc/` mit
-Planungsunterlagen und Arbeitsnotizen sowie Dateien namens `AGENTS.md` sind
-aus Git ausgeschlossen und in einem frischen Clone nicht enthalten.
